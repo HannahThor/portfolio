@@ -16,7 +16,10 @@ export default function ContactMe() {
       </div>
 
       <div className="flex flex-row justify-center items-center space-x-20">
-        <Link href="https://www.linkedin.com/in/hannah-thorley-a4727b289/">
+        <Link
+          target="_blank"
+          href="https://www.linkedin.com/in/hannah-thorley-a4727b289/"
+        >
           <Image
             src="/icons8-linkedin-50.png"
             className="hover:opacity-70"
@@ -25,7 +28,7 @@ export default function ContactMe() {
             height={50}
           />
         </Link>
-        <Link href="github.com/HannahThor">
+        <Link target="_blank" href="github.com/HannahThor">
           <Image
             src="/icons8-github-50.png"
             className="hover:opacity-70"
@@ -34,7 +37,7 @@ export default function ContactMe() {
             height={50}
           />
         </Link>
-        <Link href="mailto:hannahthorley2014@gmail.com">
+        <Link target="_blank" href="mailto:hannahthorley2014@gmail.com">
           <Image
             src="/icons8-email-50.png"
             className="hover:opacity-70"
@@ -43,7 +46,7 @@ export default function ContactMe() {
             height={50}
           />
         </Link>
-        <Link href="https://twitter.com/hdtdev">
+        <Link target="_blank" href="https://twitter.com/hdtdev">
           <Image
             src="/icons8-twitter-50.png"
             className="hover:opacity-70"
