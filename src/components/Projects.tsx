@@ -33,23 +33,21 @@ const projectData: CardProps[] = [
 
 export default function Projects() {
   return (
-    <>
-      <article id="projects" className="py-8">
-        <div className="flex flex-col justify-center items-center">
-          <Image
-            src="/projects.png"
-            alt="projects"
-            width={400}
-            height={400}
-            priority
-          />
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-20 m-20">
-          {projectData.map((project) => (
-            <Card key={project.title} {...project} />
-          ))}
-        </div>
-      </article>
-    </>
+    <article id="projects" className="py-8">
+      <div className="flex flex-col justify-center items-center">
+        <Image
+          src="/projects.png"
+          alt="projects"
+          width={400}
+          height={400}
+          priority
+        />
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-20 m-20">
+        {projectData.map((project) => (
+          <Card key={project.title} {...project} />
+        ))}
+      </div>
+    </article>
   );
 }

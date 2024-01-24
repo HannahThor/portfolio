@@ -4,42 +4,37 @@ import Link from "next/link";
 
 export default function Nav() {
   return (
-    <nav className="absolute right-20 top-10 pb-3 md:block md:pb-0 md:mt-0 block text-xl space-y-5 md:space-x-8 md:space-y-0">
-      {/* <div
-        id="links"
-        className="items-center justify-center space-y-5 md:flex md:space-x-8 md:space-y-0"
-      > */}
-      <a
-        className="block lg:inline-block cursor-pointer highlight"
+    <nav className="sm:absolute sm:right-20 top-10 pb-3 md:block md:pb-0 md:mt-0 sm:text-xl text-base flex flex-row justify-center">
+      <Link
+        className="cursor-pointer highlight hover:font-bold tracking-wide hover:tracking-normal mr-5"
         aria-label="projects"
         href="#projects"
       >
         projects
-      </a>
-      <a
-        className="block lg:inline-block cursor-pointer highlight"
+      </Link>
+      <Link
+        className="cursor-pointer highlight hover:font-bold tracking-wide hover:tracking-normal mr-5"
         aria-label="about"
         href="#about"
       >
         about
-      </a>
-      <a
-        className="block lg:inline-block cursor-pointer highlight"
+      </Link>
+      <Link
+        className="cursor-pointer highlight hover:font-bold tracking-wide hover:tracking-normal mr-5"
         aria-label="contact"
         href="#contact"
       >
-        contact me
-      </a>
+        contact
+      </Link>
       <Link
         href="/HannahThorley.pdf"
         target="_blank"
-        className={"block lg:inline-block cursor-pointer highlight"}
+        className="cursor-pointer highlight hover:font-bold tracking-wide hover:tracking-normal mr-5"
         aria-label="download CV"
         download
       >
         cv
       </Link>
-      {/* </div> */}
     </nav>
   );
 }
