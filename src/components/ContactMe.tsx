@@ -50,7 +50,7 @@ export default function ContactMe() {
           <Image
             src="/icons8-twitter-50.png"
             className="hover:opacity-70"
-            alt="mail"
+            alt="twitter"
             width={50}
             height={50}
           />
