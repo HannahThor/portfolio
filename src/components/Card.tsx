@@ -47,7 +47,7 @@ export default function Card({
       </Link>
       <div className="px-6 pt-4 pb-2">
         {tags.map((tag) => (
-          <Pill tag={tag} className="ml-0" />
+          <Pill key={tag} tag={tag} className="ml-0" />
         ))}
       </div>
     </article>
