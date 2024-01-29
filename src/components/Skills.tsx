@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Pill from "./Pill";
 
-const skillsetData = [
+const skillsData = [
   "JavaScript",
   "TypeScript",
   "HTML",
@@ -25,9 +25,9 @@ const skillsetData = [
   "Agile",
 ];
 
-export default function Skillset() {
-  const evenRows = skillsetData.filter((_, index) => index % 2 === 0);
-  const oddRows = skillsetData.filter((_, index) => index % 2 === 1);
+export default function Skills() {
+  const evenRows = skillsData.filter((_, index) => index % 2 === 0);
+  const oddRows = skillsData.filter((_, index) => index % 2 === 1);
 
   // 4 on first row
   const rowOne = evenRows.slice(0, 4);

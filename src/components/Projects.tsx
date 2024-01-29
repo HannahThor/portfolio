@@ -6,11 +6,11 @@ const projectData: CardProps[] = [
   {
     title: "Calming Down App",
     description:
-      "A simple app that provides a personal space to manage the user’s mindset and track progress, providing free tools and resources to educate the user to help them achieve their mindset goals.",
+      "A simple app that provides a personal space to manage the user’s mindset and track progress, providing free tools and resources to educate the user to help them achieve their mindset goals. Get in touch for more details.",
     tags: ["Next.js", "Tailwind", "Postgres"],
     imageSrc: "/calming-down-app.png",
     imageAlt: "calming-down app",
-    link: "https://calming-down-zen-tech.vercel.app",
+    link: "",
   },
   {
     title: "Tortee App",
@@ -43,7 +43,7 @@ export default function Projects() {
           priority
         />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-20 m-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-20 ">
         {projectData.map((project) => (
           <Card key={project.title} {...project} />
         ))}

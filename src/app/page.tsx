@@ -6,7 +6,8 @@ import Main from "@/components/Main";
 import Nav from "@/components/Nav";
 import Projects from "@/components/Projects";
 import AboutMe from "@/components/AboutMe";
-import Skillset from "@/components/Skillset";
+// import Skills from "@/components/Skills";
+import Skills from "@/components/SkillsRevisited";
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
         <Nav />
         <Heading />
         <Projects />
-        <Skillset />
+        <Skills />
         <AboutMe />
         <ContactMe />
       </div>
