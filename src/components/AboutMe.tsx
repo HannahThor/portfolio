@@ -14,7 +14,7 @@ export default function AboutMe() {
         priority
       />
 
-      <div className="sm:my-8 mx-auto w-full sm:text-lg text-sm text-center max-w-[800px] space-y-5">
+      <div className="sm:my-8 mx-auto w-full sm:text-lg text-sm font-light text-center max-w-[800px] space-y-5">
         <p>
           Hi, I&apos;m Hannah 👋🏾 and I have recently made a career shift from
           special needs education to Full-Stack Developer through the School Of

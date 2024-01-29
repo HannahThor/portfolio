@@ -6,7 +6,6 @@ import Main from "@/components/Main";
 import Nav from "@/components/Nav";
 import Projects from "@/components/Projects";
 import AboutMe from "@/components/AboutMe";
-// import Skills from "@/components/Skills";
 import Skills from "@/components/SkillsRevisited";
 
 export default function Home() {

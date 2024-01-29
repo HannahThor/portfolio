@@ -32,7 +32,7 @@ export default function Card({
       <Link href={link} target="_blank" className="">
         <div className="px-6 py-4">
           <div className="flex flex-row justify-between">
-            <h3 className="font-bold sm:text-xl text-sm mb-2">{title}</h3>
+            <h3 className="font-semibold sm:text-xl text-sm mb-2">{title}</h3>
 
             <Image
               src="/icons8-link-48.png"
@@ -42,7 +42,9 @@ export default function Card({
               className="!h-[30px]"
             />
           </div>
-          <p className="sm:text-base text-xs text-left">{description}</p>
+          <p className="sm:text-base text-xs font-light text-left">
+            {description}
+          </p>
         </div>
       </Link>
       <div className="px-6 pt-4 pb-2">
