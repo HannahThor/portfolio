@@ -13,6 +13,13 @@ export default function Nav() {
         projects
       </a>
       <a
+        className="cursor-pointer highlight hover:font-semibold tracking-wide hover:tracking-normal  mx-2"
+        aria-label="skills"
+        href="/#skills"
+      >
+        skills
+      </a>
+      <a
         className="cursor-pointer highlight hover:font-semibold  tracking-wide hover:tracking-normal  mx-2"
         aria-label="about"
         href="/#about"
