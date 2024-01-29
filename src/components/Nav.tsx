@@ -5,28 +5,28 @@ import Link from "next/link";
 export default function Nav() {
   return (
     <nav className="sm:absolute sm:right-10 top-10 pb-3 md:block md:pb-0 md:mt-0 sm:text-xl text-base flex flex-row justify-center font-light">
-      <Link
+      <a
         className="cursor-pointer highlight hover:font-semibold tracking-wide hover:tracking-normal  mx-2"
         aria-label="projects"
         href="/#projects"
       >
         projects
-      </Link>
-      <Link
+      </a>
+      <a
         className="cursor-pointer highlight hover:font-semibold  tracking-wide hover:tracking-normal  mx-2"
         aria-label="about"
         href="/#about"
       >
         about
-      </Link>
-      <Link
+      </a>
+      <a
         className="cursor-pointer highlight hover:font-semibold  tracking-wide hover:tracking-normal   mx-2"
         aria-label="contact"
         href="/#contact"
       >
         contact
-      </Link>
-      <Link
+      </a>
+      <a
         href="/HannahThorley.pdf"
         target="_blank"
         className="cursor-pointer highlight hover:font-semibold  tracking-wide hover:tracking-normal mx-2"
@@ -34,7 +34,7 @@ export default function Nav() {
         download
       >
         cv
-      </Link>
+      </a>
     </nav>
   );
 }
