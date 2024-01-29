@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function AboutMe() {
   return (
     <article
-      className="my-8 mx-auto w-full text-lg text-center max-w-[800px] h-screen flex flex-col justify-center items-center"
+      className="py-8 mx-auto w-full text-lg text-center max-w-[800px] flex flex-col justify-center items-center"
       id="about"
     >
       <Image
@@ -14,7 +14,7 @@ export default function AboutMe() {
         priority
       />
 
-      <div className="my-8 mx-auto w-full text-lg text-center max-w-[800px] space-y-5">
+      <div className="sm:my-8 mx-auto w-full sm:text-lg text-sm text-center max-w-[800px] space-y-5">
         <p>
           Hi, I&apos;m Hannah 👋🏾 and I have recently made a career shift from
           special needs education to Full-Stack Developer through the School Of

@@ -4,8 +4,8 @@ import Link from "next/link";
 
 export default function ContactMe() {
   return (
-    <article id="contact">
-      <div className="flex flex-col justify-center items-center mt-20 mb-10">
+    <article id="contact" className="py-2">
+      <div className="flex flex-col justify-center items-center mt-10 mb-10">
         <Image
           src="/contactme.png"
           alt="comtact me"
@@ -15,7 +15,7 @@ export default function ContactMe() {
         />
       </div>
 
-      <div className="flex flex-row justify-center items-center space-x-20">
+      <div className="flex flex-row justify-center sm:space-x-20 space-x-10">
         <Link
           target="_blank"
           href="https://www.linkedin.com/in/hannah-thorley-a4727b289/"
