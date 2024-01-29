@@ -8,7 +8,6 @@ export default function Nav() {
       <Link
         className="cursor-pointer highlight hover:font-semibold tracking-wide hover:tracking-normal  mx-2"
         aria-label="projects"
-        scroll={false}
         href="/#projects"
       >
         projects
@@ -16,7 +15,6 @@ export default function Nav() {
       <Link
         className="cursor-pointer highlight hover:font-semibold  tracking-wide hover:tracking-normal  mx-2"
         aria-label="about"
-        scroll={false}
         href="/#about"
       >
         about
@@ -24,7 +22,6 @@ export default function Nav() {
       <Link
         className="cursor-pointer highlight hover:font-semibold  tracking-wide hover:tracking-normal   mx-2"
         aria-label="contact"
-        scroll={false}
         href="/#contact"
       >
         contact
