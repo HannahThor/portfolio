@@ -28,7 +28,7 @@ export default function ContactMe() {
             height={50}
           />
         </Link>
-        <Link target="_blank" href="github.com/HannahThor">
+        <Link target="_blank" href="https://github.com/HannahThor">
           <Image
             src="/icons8-github-50.png"
             className="hover:opacity-70"
