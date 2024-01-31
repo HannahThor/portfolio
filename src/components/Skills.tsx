@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Pill from "./Pill";
+import { useWindowWidth } from "@react-hook/window-size";
 
 const skillsData = [
   "JavaScript",
@@ -26,19 +27,39 @@ const skillsData = [
 ];
 
 export default function Skills() {
-  const evenRows = skillsData.filter((_, index) => index % 2 === 0);
-  const oddRows = skillsData.filter((_, index) => index % 2 === 1);
+  const screenWidth = useWindowWidth();
+  // split the skills into rows of 4, and rows of 5. If the last row doesn't have enough skills to fill either 4 or 5, then add the remaining skills to the last row.
+  const skillRows: string[][] = [];
+  let skillRow: string[] = [];
+  const skillsLength = skillsData.length;
 
-  // 4 on first row
-  const rowOne = evenRows.slice(0, 4);
-  // 5 on second row
-  const rowTwo = oddRows.slice(0, 5);
-  // 4 on third row
-  const rowThree = evenRows.slice(4, 8);
-  // 5 on fourth row
-  const rowFour = oddRows.slice(5, 10);
-  // 2 on fifth row
-  const rowFive = evenRows.slice(8, 10);
+  // if small screen, make row length either 2 or 3
+  // line 39, get rid of ternery operator and make it an if statement
+
+  skillsData.forEach((skill, index) => {
+    // Even rows have 4 skills, odd rows have 5 skills
+    const isEvenRow = skillRows.length % 2 === 0;
+
+    const isSmallScreen = screenWidth < 700;
+    let rowLength = isEvenRow ? 4 : 5;
+    if (isSmallScreen) {
+      rowLength = isEvenRow ? 2 : 3;
+    }
+
+    // If the row is full, start a new row
+    if (skillRow.length === rowLength) {
+      skillRows.push(skillRow);
+      skillRow = [];
+    }
+
+    // Add the skill to the row
+    skillRow.push(skill);
+
+    // If we're on the last skill, add the last row
+    if (index === skillsLength - 1) {
+      skillRows.push(skillRow);
+    }
+  });
 
   return (
     <article
@@ -54,56 +75,18 @@ export default function Skills() {
           priority
         />
       </div>
-      {/* 4 on first row */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-2 my-5">
-        {rowOne.map((skill) => (
-          <Pill
-            key={skill}
-            tag={skill}
-            className="w-[120px] flex justify-self-center justify-center"
-          />
-        ))}
-      </div>
-      {/* 5 on second row */}
-      <div className="grid grid-cols-1 md:grid-cols-5 gap-2 my-5">
-        {rowTwo.map((skill) => (
-          <Pill
-            key={skill}
-            tag={skill}
-            className="w-[120px] flex justify-self-center justify-center"
-          />
-        ))}
-      </div>
-      {/* 4 on third row */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-2 my-5">
-        {rowThree.map((skill) => (
-          <Pill
-            key={skill}
-            tag={skill}
-            className="w-[120px] flex justify-self-center justify-center"
-          />
-        ))}
-      </div>
-      {/* 5 on fourth row */}
-      <div className="grid grid-cols-1 md:grid-cols-5 gap-2 my-5">
-        {rowFour.map((skill) => (
-          <Pill
-            key={skill}
-            tag={skill}
-            className="w-[120px] flex justify-self-center justify-center"
-          />
-        ))}
-      </div>
-      {/* 2 on fifth row */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 my-5">
-        {rowFive.map((skill) => (
-          <Pill
-            key={skill}
-            tag={skill}
-            className="w-[120px] flex justify-self-center justify-center"
-          />
-        ))}
-      </div>
+
+      {skillRows.map((row, index) => (
+        <div key={index} className="flex flex-row justify-center items-center">
+          {row.map((skill) => (
+            <Pill
+              key={skill}
+              tag={skill}
+              className="sm:w-[120px] flex justify-self-center justify-center   whitespace-nowrap"
+            />
+          ))}
+        </div>
+      ))}
     </article>
   );
 }
