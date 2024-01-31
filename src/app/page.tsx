@@ -7,8 +7,13 @@ import Nav from "@/components/Nav";
 import Projects from "@/components/Projects";
 import AboutMe from "@/components/AboutMe";
 import Skills from "@/components/Skills";
+import Hotjar from "@hotjar/browser";
 
 export default function Home() {
+  const siteId = 3847701;
+  const hotjarVersion = 6;
+
+  Hotjar.init(siteId, hotjarVersion);
   return (
     <Main>
       {/* We are using a wrapper div as our main is where the styling lives for our glow pointer */}
