@@ -21,7 +21,7 @@ function CardContent({
 }: Pick<CardProps, "link" | "title" | "description">) {
   if (!link) {
     return (
-      <div className="px-6 py-4">
+      <div className="py-4">
         <div className="flex flex-row justify-between">
           <h3 className="font-semibold sm:text-xl text-sm mb-2">{title}</h3>
         </div>
@@ -33,7 +33,7 @@ function CardContent({
   }
   return (
     <Link href={link} target="_blank" className="">
-      <div className="px-6 py-4">
+      <div className="py-4">
         <div className="flex flex-row justify-between">
           <h3 className="font-semibold sm:text-xl text-sm mb-2">{title}</h3>
 
@@ -72,7 +72,7 @@ export default function Card({
       />
       <CardContent title={title} description={description} link={link} />
 
-      <div className="px-6 pt-4 pb-2">
+      <div className="pt-4 pb-2">
         {tags.map((tag) => (
           <Pill key={tag} tag={tag} className="ml-0" />
         ))}

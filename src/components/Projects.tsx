@@ -7,7 +7,7 @@ const projectData: CardProps[] = [
     title: "Calming Down App",
     description:
       "A simple app that provides a personal space to manage the user’s mindset and track progress, providing free tools and resources to educate the user to help them achieve their mindset goals. Get in touch for more details.",
-    tags: ["Next.js", "Tailwind", "Postgres"],
+    tags: ["Next.js", "Tailwind", "Postgres", "Figma"],
     imageSrc: "/calming-down-app.png",
     imageAlt: "calming-down app",
   },
@@ -40,7 +40,7 @@ const projectData: CardProps[] = [
 
 export default function Projects() {
   return (
-    <article id="projects" className="py-8">
+    <article id="projects" className="py-8 flex flex-col items-center">
       <div className="flex flex-col justify-center items-center">
         <Image
           src="/projects.png"
@@ -50,7 +50,7 @@ export default function Projects() {
           priority
         />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-20 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-20 max-w-[1000px]">
         {projectData.map((project) => (
           <Card key={project.title} {...project} />
         ))}
