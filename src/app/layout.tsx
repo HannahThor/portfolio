@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [
       {
-        url: OGImage.src,
+        url: "https://res.cloudinary.com/djw5ad80d/image/upload/v1706732178/kctygjxh2aaqleizznpq.jpg",
         width: 802,
         height: 497,
         alt: "Hannah Thorley's Portfolio",
