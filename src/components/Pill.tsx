@@ -9,5 +9,5 @@ export default function Pill({
   if (className) {
     fullClassName = `${fullClassName} ${className}`;
   }
-  return <span className={fullClassName}>{tag}</span>;
+  return <div className={fullClassName}>{tag}</div>;
 }

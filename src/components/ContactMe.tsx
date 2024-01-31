@@ -9,8 +9,8 @@ export default function ContactMe() {
         <Image
           src="/contactme.png"
           alt="comtact me"
-          width={400}
-          height={400}
+          width={497}
+          height={91}
           priority
         />
       </div>

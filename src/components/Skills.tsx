@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useLayoutEffect, useState } from "react";
 import Image from "next/image";
 import Pill from "./Pill";
 import { useWindowWidth } from "@react-hook/window-size";
@@ -27,6 +27,12 @@ const skillsData = [
 ];
 
 export default function Skills() {
+  const [isLayoutReady, setIsLayoutReady] = useState(false);
+
+  useLayoutEffect(() => {
+    setIsLayoutReady(true);
+  }, []);
+
   const screenWidth = useWindowWidth();
   // split the skills into rows of 4, and rows of 5. If the last row doesn't have enough skills to fill either 4 or 5, then add the remaining skills to the last row.
   const skillRows: string[][] = [];
@@ -62,31 +68,24 @@ export default function Skills() {
   });
 
   return (
-    <article
+    <section
       id="skills"
       className="py-8 max-w-[800px] mx-auto flex flex-col items-center"
     >
-      <div className="flex flex-col justify-center items-center">
-        <Image
-          src="/skills.png"
-          alt="skills"
-          width={400}
-          height={400}
-          priority
-        />
-      </div>
+      <Image src="/skills.png" alt="skills" width={400} height={400} priority />
 
-      {skillRows.map((row, index) => (
-        <div key={index} className="flex flex-row justify-center items-center">
-          {row.map((skill) => (
-            <Pill
-              key={skill}
-              tag={skill}
-              className="sm:w-[120px] flex justify-self-center justify-center   whitespace-nowrap"
-            />
-          ))}
-        </div>
-      ))}
-    </article>
+      {isLayoutReady &&
+        skillRows.map((row, index) => (
+          <ul key={index} className="flex flex-row justify-center items-center">
+            {row.map((skill) => (
+              <Pill
+                key={skill}
+                tag={skill}
+                className="sm:w-[120px] flex justify-self-center justify-center   whitespace-nowrap"
+              />
+            ))}
+          </ul>
+        ))}
+    </section>
   );
 }

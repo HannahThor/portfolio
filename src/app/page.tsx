@@ -13,11 +13,14 @@ export default function Home() {
   const siteId = 3847701;
   const hotjarVersion = 6;
 
-  try {
-    Hotjar.init(siteId, hotjarVersion);
-  } catch (error) {
-    // no-op
+  if (process.env.CONTEXT === "production") {
+    try {
+      Hotjar.init(siteId, hotjarVersion);
+    } catch (error) {
+      // no-op
+    }
   }
+
   return (
     <Main>
       {/* We are using a wrapper div as our main is where the styling lives for our glow pointer */}
