@@ -12,8 +12,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: OGImage.src,
-        width: 512,
-        height: 512,
+        width: 802,
+        height: 497,
         alt: "Hannah Thorley's Portfolio",
       },
     ],
