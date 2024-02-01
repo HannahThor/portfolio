@@ -13,10 +13,6 @@ import Script from "next/script";
 export default function Home() {
   return (
     <Main>
-      <Script
-        src="https://static.hotjar.com/c/hotjar-3847701.js?sv=6"
-        strategy="afterInteractive"
-      />
       {/* We are using a wrapper div as our main is where the styling lives for our glow pointer */}
       <div className="container mx-auto">
         <Nav />
