@@ -8,21 +8,15 @@ import Projects from "@/components/Projects";
 import AboutMe from "@/components/AboutMe";
 import Skills from "@/components/Skills";
 import Hotjar from "@hotjar/browser";
+import Script from "next/script";
 
 export default function Home() {
-  const siteId = 3847701;
-  const hotjarVersion = 6;
-
-  if (process.env.CONTEXT === "production") {
-    try {
-      Hotjar.init(siteId, hotjarVersion);
-    } catch (error) {
-      // no-op
-    }
-  }
-
   return (
     <Main>
+      <Script
+        src="https://static.hotjar.com/c/hotjar-3847701.js?sv=6"
+        strategy="afterInteractive"
+      />
       {/* We are using a wrapper div as our main is where the styling lives for our glow pointer */}
       <div className="container mx-auto">
         <Nav />
