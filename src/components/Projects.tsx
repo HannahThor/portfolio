@@ -28,14 +28,6 @@ const projectData: CardProps[] = [
     imageAlt: "favourite bakes",
     link: "https://favourite-bakes.vercel.app/",
   },
-  {
-    title: "Weather App",
-    description: "Find out the weather in your city.",
-    tags: ["JavaScript", "HTML", "CSS"],
-    imageSrc: "/weather.jpg",
-    imageAlt: "weather in London",
-    link: "https://hdt-weather-app.netlify.app",
-  },
 ];
 
 export default function Projects() {
