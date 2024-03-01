@@ -7,8 +7,7 @@ import Nav from "@/components/Nav";
 import Projects from "@/components/Projects";
 import AboutMe from "@/components/AboutMe";
 import Skills from "@/components/Skills";
-import Hotjar from "@hotjar/browser";
-import Script from "next/script";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -21,6 +20,7 @@ export default function Home() {
         <Skills />
         <AboutMe />
         <ContactMe />
+        <Footer />
       </div>
     </Main>
   );
