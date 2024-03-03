@@ -1,4 +1,9 @@
+
+![hannah thorley](https://github.com/HannahThor/portfolio/assets/74144109/5ed610ad-a79d-4964-ac25-4fabf3d71fbf)
+
 This is my portfolio to showcase all of the projects I've been working on, enjoy ☺️
+
+This project is a work in progress,
 
 ## Getting Started
 
