@@ -3,7 +3,9 @@
 
 This is my portfolio to showcase all of the projects I've been working on, enjoy ☺️
 
-This project is a work in progress,
+This project is a work in progress, I update as I create new projects, find bugs or get new ideas.
+
+---
 
 ## Getting Started
 
@@ -24,3 +26,5 @@ To learn more about Next.js, take a look at:
 ## Deployed on Netlify
 
 [https://hdtdev.xyz](https://hdtdev.xyz)
+
+---
