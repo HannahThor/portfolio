@@ -28,3 +28,9 @@ To learn more about Next.js, take a look at:
 [https://hdtdev.xyz](https://hdtdev.xyz)
 
 ---
+## Features
+- projects
+- skills
+- about me
+- contact
+- cv
