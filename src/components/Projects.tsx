@@ -10,6 +10,7 @@ const projectData: CardProps[] = [
     tags: ["Next.js", "Tailwind", "Postgres", "Figma"],
     imageSrc: "/calming-down-app.png",
     imageAlt: "calming-down app",
+    link: "https://youtu.be/g56lQd2woko",
   },
   {
     title: "Tortee App",
